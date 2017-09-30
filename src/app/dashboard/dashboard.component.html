@@ -20,7 +20,7 @@
                             <i class="material-icons">account_balance_wallet </i>
                         </div>
                         <div class="card-content">
-                            <p class="category">Current Investment</p>
+                            <p class="category">Recent Investment</p>
                             <h3 class="title">${{value}}</h3>
                         </div>
                        
@@ -59,7 +59,7 @@
                         <!--<div class="card-header card-chart" data-background-color="green">-->
                             <div >
                             <button (click)='buy()'>Buy</button>
-                            <input type="text" [(ngModel)]='value' />
+                            <input type="number" [(ngModel)]='value' />
                             <button (click)='sell()'>Sell</button>   
                             <!--<h1>{{count}}</h1>-->
                             </div>
@@ -326,31 +326,24 @@
                 </div>
 
 
+
                 <div class="col-lg-6 col-md-12">
                     <div class="card" >
                         <div class="card-header" data-background-color="orange">
-                            <h4 class="title">Related News</h4>
-                    <iframe src="https://www.coindesk.com/category/business-news/" width="410" height="500" frameborder="0">
-                        
-                    </iframe>
-
-                    </div>
-                </div>
-
-
-                </div>
-
-
-
-                <!--<div class="col-lg-6 col-md-12">
-                    <div class="card" >
-                        <div class="card-header" data-background-color="orange">
-                            <h4 class="title">Employees Stats</h4>
-                            <p class="category">New employees on 15th September, 2016</p>
+                            <h4 class="title">News Feed</h4>
+                            <p class="category">News about cryptocurrency</p>
                         </div>
                         <div class="card-content table-responsive">
                             <table class="table table-hover">
-                                <thead class="text-warning">
+
+                                <ul>
+                                <li><a href="http://www.reuters.com/article/us-rbc-blockchain/exclusive-royal-bank-of-canada-using-blockchain-for-u-s-canada-payments-executive-idUSKCN1C237N">Royal Bank of Canada using blockchain for U.S./Canada payments - executive</a></li>
+                                <li><a href="https://thenextweb.com/contributors/2017/09/29/bitcoin-ethereum-will-soon-everywhere-reals/#.tnw_Jmt8a6Yb">Why Bitcoin and Ethereum will soon be everywhere</a></li>
+                                <li><a href="https://cointelegraph.com/news/japan-issues-cryptocurrency-exchange-licenses">Japan Issues Cryptocurrency Exchange Licenses</a></li>
+                                <li><a href="http://www.atimes.com/cryptocurrencies-china-blocked-initial-coin-offerings/">Cryptocurrencies: why China blocked initial coin offerings</a></li>
+                                <li><a href="https://www.cryptocoinsnews.com/ethereum-bitcoin-prices-end-week-high-note/">Ethereum, Bitcoin Prices End the Week on a High Note</a></li>
+                                </ul>
+                                <!--<thead class="text-warning">
                                     <tr>
                                         <th>ID</th>
                                         <th>Name</th>
@@ -383,11 +376,11 @@
                                         <td>$38,735</td>
                                         <td>Korea, South</td>
                                     </tr>
-                                </tbody>
+                                </tbody>-->
                             </table>
                         </div>
                     </div>
-                </div>-->
+                </div>
             </div>
         </div>
 </div>
