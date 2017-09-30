@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import * as Chartist from 'chartist';
 
 @Component({
@@ -8,7 +8,33 @@ import * as Chartist from 'chartist';
 })
 export class DashboardComponent implements OnInit {
 
-  constructor() { }
+
+count : number = 5000;
+value : number;   
+
+     @Output() counterChange :  EventEmitter<number>;
+        constructor(){
+         
+            this.counterChange = new EventEmitter();
+         
+        }
+     
+     @Input() 
+        get counter(){
+            return this.count; 
+        }
+
+        buy(){
+
+            this.count = this.count + this.value; 
+            this.counterChange.emit(this.count);
+        }
+
+        sell(){
+            this.count = this.count - this.value; 
+            this.counterChange.emit(this.count); 
+        }
+
   startAnimationForLineChart(chart){
       let seq: any, delays: any, durations: any;
       seq = 0;
@@ -148,3 +174,4 @@ export class DashboardComponent implements OnInit {
   }
 
 }
+
