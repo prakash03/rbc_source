@@ -645,7 +645,7 @@ h2.title {
 }
 .sidebar[data-color="red"] .nav li.active a,
 .off-canvas-sidebar[data-color="red"] .nav li.active a {
-  background-color: #f44336;
+  background-color: #33459c;
   box-shadow: 0 12px 20px -10px rgba(244, 67, 54, 0.28), 0 4px 20px 0px rgba(0, 0, 0, 0.12), 0 7px 8px -5px rgba(244, 67, 54, 0.2);
 }
 .sidebar[data-color="purple"] .nav li.active a,
@@ -1122,7 +1122,7 @@ h2.title {
 .navbar .navbar-nav > li > a.btn.btn-danger.dropdown-toggle, .open >
 .navbar .navbar-nav > li > a.btn.btn-danger.dropdown-toggle:focus, .open >
 .navbar .navbar-nav > li > a.btn.btn-danger.dropdown-toggle:hover {
-  background-color: #f44336;
+  background-color: #33459c;
   color: #FFFFFF;
 }
 .btn.btn-danger:focus, .btn.btn-danger:active, .btn.btn-danger:hover,
@@ -1161,7 +1161,7 @@ h2.title {
 .btn.btn-danger.btn-simple,
 .navbar .navbar-nav > li > a.btn.btn-danger.btn-simple {
   background-color: transparent;
-  color: #f44336;
+  color: #33459c;
   box-shadow: none;
 }
 .btn.btn-danger.btn-simple:hover, .btn.btn-danger.btn-simple:focus, .btn.btn-danger.btn-simple:active,
@@ -1440,7 +1440,7 @@ h2.title {
 }
 .btn-group.open > .dropdown-toggle.btn.btn-danger,
 .btn-group-vertical.open > .dropdown-toggle.btn.btn-danger {
-  background-color: #f44336;
+  background-color: #33459c;
 }
 .btn-group.open > .dropdown-toggle.btn.btn-rose,
 .btn-group-vertical.open > .dropdown-toggle.btn.btn-rose {
@@ -1851,7 +1851,7 @@ output {
   background-color: #ff9800;
 }
 .label.label-danger {
-  background-color: #f44336;
+  background-color: #33459c;
 }
 .label.label-rose {
   background-color: #e91e63;
@@ -1937,7 +1937,7 @@ output {
   background-image: linear-gradient(#ff9800, #ff9800), linear-gradient(#D2D2D2, #D2D2D2);
 }
 .form-group.is-focused.form-danger .form-control {
-  background-image: linear-gradient(#f44336, #f44336), linear-gradient(#D2D2D2, #D2D2D2);
+  background-image: linear-gradient(#33459c, #33459c), linear-gradient(#D2D2D2, #D2D2D2);
 }
 .form-group.is-focused.form-rose .form-control {
   background-image: linear-gradient(#e91e63, #e91e63), linear-gradient(#D2D2D2, #D2D2D2);
@@ -3800,12 +3800,13 @@ footer .btn {
   border-top: none;
 }
 .card [data-background-color="purple"] {
-  background: linear-gradient(60deg, #ab47bc, #8e24aa);
-  box-shadow: 0 12px 20px -10px rgba(156, 39, 176, 0.28), 0 4px 20px 0px rgba(0, 0, 0, 0.12), 0 7px 8px -5px rgba(156, 39, 176, 0.2);
+ /*background: linear-gradient(60deg, #ab47bc, #8e24aa);
+  box-shadow: 0 12px 20px -10px rgba(156, 39, 176, 0.28), 0 4px 20px 0px rgba(0, 0, 0, 0.12), 0 7px 8px -5px rgba(156, 39, 176, 0.2);*/
 }
-.card [data-background-color="blue"] {
-  background: linear-gradient(60deg, #26c6da, #00acc1);
-  box-shadow: 0 12px 20px -10px rgba(0, 188, 212, 0.28), 0 4px 20px 0px rgba(0, 0, 0, 0.12), 0 7px 8px -5px rgba(0, 188, 212, 0.2);
+.card [data-background-color="yellow"] {
+/*  background: linear-gradient(60deg, #FFFFFF, #33459c);
+  box-shadow: 0 12px 20px -10px rgba(51,69,156, 0.28), 0 4px 20px 0px rgba(0, 0, 0, 0.12), 0 7px 8px -5px rgba(0, 188, 212, 0.2);
+  */
 }
 .card [data-background-color="green"] {
   background: linear-gradient(60deg, #66bb6a, #43a047);
