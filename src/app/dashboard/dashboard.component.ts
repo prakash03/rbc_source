@@ -14,19 +14,19 @@ count : number = 20000;
 value : number = 0;
 
 btc : number;
-btc_price : number = 4283.97; 
+btc_price : number = 4283; 
 btc_value : number = 0;  
 
 eth : number;
-eth_price : number = 297.89; 
+eth_price : number = 297; 
 eth_value : number = 0;  
 
 bhc : number;
-bhc_price : number = 53.94; 
+bhc_price : number = 53; 
 bhc_value : number = 0; 
 
 xrp : number;
-xrp_price : number = 0.198; 
+xrp_price : number = 0.19; 
 xrp_value : number = 0; 
 
 investment : number = 0;
