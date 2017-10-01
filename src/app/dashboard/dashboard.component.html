@@ -75,16 +75,14 @@
 
                 <div>
                     
-                            <iframe width="1000" height="450" frameborder="0" scrolling="no" src="//plot.ly/~RohanVardhan/5.embed"></iframe>
+                           <iframe width="900" height="450" frameborder="0" scrolling="no" src="//plot.ly/~RohanVardhan/8.embed"></iframe>
                         </div>
                         <div class="card-content">
                             <h4 class="title">Prices for top cryptocurrencies</h4>
                             <p class="category"></p>
                         </div>
                         <div class="card-footer">
-                            <div class="stats">
-                                <i class="material-icons">access_time</i> campaign sent 2 days ago
-                            </div>
+                            
                         
                 </div>
 
@@ -123,7 +121,7 @@
                                     <tr>
                                         <td>Bitcoin</td>
                                         <td>${{btc_price}}</td>
-                                        <td><input type="number" [(ngModel)]='btc'/></td>
+                                        <td><input type="number" min="0" [(ngModel)]='btc'/></td>
                                         <td><button (click)='buy_btc()'>Buy</button><button (click)='sell_btc()'>Sell</button></td>
                                         <td>{{btc_value}}</td>
                                     </tr>
