@@ -21,7 +21,7 @@
                         </div>
                         <div class="card-content">
                             <p class="category">Investment</p>
-                            <h3 class="title">${{btc_value + eth_value + bhc_value + xrp_value}}</h3>
+                            <h3 class="title">${{investment}}</h3>
                         </div>
                        
                     </div>
@@ -56,22 +56,7 @@
             </div>
 
             <div class="row">
-                <!--<div class="col-md-4">
-                    <div class="card" >
-                        <!--<div class="card-header card-chart" data-background-color="green">
-                            <div >
-                            <button (click)='buy()'>Buy</button>
-                            <input type="number" [(ngModel)]='value' />
-                            <button (click)='sell()'>Sell</button>   
-                            <!--<h1>{{count}}</h1>
-                            </div>
-                        <div class="card-content">
-                            <h4 class="title">Buy/Sell</h4>
-                            <!--<p class="category"><span class="text-success"><i class="fa fa-long-arrow-up"></i> 55%  </span> increase in today sales.</p>
-                        </div>
-                      
-                    </div>
-                </div>-->
+                
 
                 <div>
                     
@@ -114,7 +99,7 @@
                                        
                                         <th>Name</th>
                                         <th>Closing Price</th>
-                                        <th>Buy/Sell</th>
+                                        <th>Quantity</th>
                                     </tr>
                                 </thead>
                                 <tbody>
@@ -122,43 +107,49 @@
                                         <td>Bitcoin</td>
                                         <td>${{btc_price}}</td>
                                         <td><input type="number" min="0" [(ngModel)]='btc'/></td>
-                                        <td><button (click)='buy_btc()'>Buy</button><button (click)='sell_btc()'>Sell</button></td>
+                                        <td><button type=button class="btn btn-primary" style="background-color: #3364FF" (click)='add_btc()'>Add to Cart</button></td>
                                         <td>{{btc_value}}</td>
+                                        
                                     </tr>
                                     <tr>
                                         <td>Ethereum</td>
                                         <td>${{eth_price}}</td>
                                         <td><input type="number" [(ngModel)]='eth'/></td>
-                                        <td><button (click)='buy_eth()'>Buy</button><button (click)='sell_eth()'>Sell</button></td>
+                                        <td><button type=button class="btn btn-primary" style="background-color: #3364FF" (click)='add_eth()'>Add to Cart</button></td>
                                         <td>{{eth_value}}</td>
+
                                     </tr>
                                     <tr>
-                                        <td>Bitcoin Cash</td>
+                                        <td>Litecoin</td>
                                         <td>${{bhc_price}}</td>
                                         <td><input type="number" [(ngModel)]='bhc'/></td>
-                                        <td><button (click)='buy_bhc()'>Buy</button><button (click)='sell_bhc()'>Sell</button></td>
+                                        <td><button type=button class="btn btn-primary" style="background-color: #3364FF" (click)='add_bhc()'>Add to Cart</button></td>
                                         <td>{{bhc_value}}</td>
                                     </tr>
                                     <tr>
                                         <td>Ripple</td>
                                         <td>${{xrp_price}}</td>
                                         <td><input type="number" [(ngModel)]='xrp'/></td>
-                                        <td><button (click)='buy_xrp()'>Buy</button><button (click)='sell_xrp()'>Sell</button></td>
+                                        <td><button type=button class="btn btn-primary" style="background-color: #3364FF" (click)='add_xrp()'>Add to Cart</button></td>
                                         <td>{{xrp_value}}</td>
                                     </tr>
                                     <tr>
                                         
-                                        <td>Total</td>
+                                        <td></td>
                                         <td></td>
                                         <td></td>
                                         <td></td>
                                         <td>{{btc_value + eth_value + bhc_value + xrp_value}}</td>
+                                    </tr>   
+                                    <tr>
+                                        
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td><button type=button onclick="myFunction()" class="btn btn-primary" style="background-color: #3364FF" (click)='buy_all()'>Buy</button>    <button type=button onclick="myFunction()" class="btn btn-primary" style="background-color: #3364FF"(click)='sell_all()'>Sell</button></td>
+                                        <td>{{value}}</td>
                                     </tr>
                                 </tbody>
-
-
-
-                                        
                                     </table>
                                 </div>
                                 
@@ -173,7 +164,7 @@
                     <div class="card" >
                         <div class="card-header" data-background-color="blue">
                             <h4 class="title">News Feed</h4>
-                            <p class="category">News about cryptocurrency</p>
+                            <p class="category"></p>
                         </div>
                         <div class="card-content table-responsive">
                             <table class="table table-hover">
@@ -193,3 +184,5 @@
             </div>
         </div>
 </div>
+
+

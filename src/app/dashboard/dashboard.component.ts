@@ -8,30 +8,36 @@ import * as Chartist from 'chartist';
 })
 export class DashboardComponent implements OnInit {
 
+success : string = "Txn success";
 
-count : number = 5000;
-value : number;
+count : number = 20000;
+value : number = 0;
 
 btc : number;
-btc_price : number = 4000; 
+btc_price : number = 4283.97; 
 btc_value : number = 0;  
 
 eth : number;
-eth_price : number = 300; 
+eth_price : number = 297.89; 
 eth_value : number = 0;  
 
 bhc : number;
-bhc_price : number = 350; 
+bhc_price : number = 53.94; 
 bhc_value : number = 0; 
 
 xrp : number;
-xrp_price : number = 0.22; 
+xrp_price : number = 0.198; 
 xrp_value : number = 0; 
 
+investment : number = 0;
+
      @Output() counterChange :  EventEmitter<number>;
+     @Output() valueChange :  EventEmitter<number>;
+     @Output() invChange :  EventEmitter<number>;
         constructor(){
          
             this.counterChange = new EventEmitter();
+            this.valueChange = new EventEmitter();
          
         }
      
@@ -40,15 +46,46 @@ xrp_value : number = 0;
             return this.count; 
         }
 
-        buy(){
-
-            this.count = this.count - this.value; 
-            this.counterChange.emit(this.count);
+        add_btc(){
+        this.btc_value = this.btc_price * this.btc;
         }
 
-        sell(){
-            this.count = this.count + this.value; 
-            this.counterChange.emit(this.count); 
+        add_eth(){
+        this.eth_value = this.eth_price * this.eth;
+        }
+
+        add_bhc(){
+        this.bhc_value = this.bhc_price * this.bhc;
+        }
+
+        add_xrp(){
+        this.xrp_value = this.xrp_price * this.xrp;
+        }
+
+        
+
+
+        buy_all(){
+        this.value = this.btc_value + this.eth_value + this.bhc_value + this.xrp_value;
+        this.count = this.count - this.value;
+        this.counterChange.emit(this.count);
+        this.valueChange.emit(this.value);
+        this.investment = this.investment + this.value;
+        this.invChange.emit(this.investment);
+        console.log(this.success);
+        }
+
+        sell_all(){
+        this.value = this.btc_value + this.eth_value + this.bhc_value + this.xrp_value;
+        this.count = this.count + this.value;
+        this.counterChange.emit(this.count);        
+        this.valueChange.emit(this.value);
+        this.investment = 0;
+        this.invChange.emit(this.investment);
+        }
+
+        submit(){
+        this.value = this.btc_value + this.eth_value + this.bhc_value + this.xrp_value;
         }
 
         buy_btc(){
