@@ -42,60 +42,60 @@ xrp_value : number = 0;
 
         buy(){
 
-            this.count = this.count + this.value; 
+            this.count = this.count - this.value; 
             this.counterChange.emit(this.count);
         }
 
         sell(){
-            this.count = this.count - this.value; 
+            this.count = this.count + this.value; 
             this.counterChange.emit(this.count); 
         }
 
         buy_btc(){
             this.btc_value = this.btc_price * this.btc;
-            this.count = this.count + this.btc_value; 
+            this.count = this.count - this.btc_value; 
             this.counterChange.emit(this.count);
         }
 
         sell_btc(){
             this.btc_value = this.btc_price * this.btc;
-            this.count = this.count - this.btc_value; 
+            this.count = this.count + this.btc_value; 
             this.counterChange.emit(this.count);
         }
 
         buy_eth(){
             this.eth_value = this.eth_price * this.eth;
-            this.count = this.count + this.eth_value; 
+            this.count = this.count - this.eth_value; 
             this.counterChange.emit(this.count);
         }
 
         sell_eth(){
             this.eth_value = this.eth_price * this.eth;
-            this.count = this.count - this.eth_value; 
+            this.count = this.count + this.eth_value; 
             this.counterChange.emit(this.count);
         }
 
         buy_bhc(){
             this.bhc_value = this.bhc_price * this.bhc;
-            this.count = this.count + this.bhc_value; 
+            this.count = this.count - this.bhc_value; 
             this.counterChange.emit(this.count);
         }
 
         sell_bhc(){
             this.bhc_value = this.bhc_price * this.bhc;
-            this.count = this.count - this.bhc_value; 
+            this.count = this.count + this.bhc_value; 
             this.counterChange.emit(this.count);
         }
 
         buy_xrp(){
             this.xrp_value = this.xrp_price * this.xrp;
-            this.count = this.count + this.xrp_value; 
+            this.count = this.count - this.xrp_value; 
             this.counterChange.emit(this.count);
         }
 
         sell_xrp(){
             this.xrp_value = this.xrp_price * this.xrp;
-            this.count = this.count - this.xrp_value; 
+            this.count = this.count + this.xrp_value; 
             this.counterChange.emit(this.count);
         }
 
